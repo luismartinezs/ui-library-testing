@@ -24,7 +24,7 @@
 ## Libraries to test
 
 - [x] DaisyUI
-- [ ] React Bootstrap
+- [x] React Bootstrap
 - [ ] ChakraUI
 - [ ] Tailwind UI
 - [ ] Flowbite React
