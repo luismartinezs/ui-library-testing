@@ -27,5 +27,5 @@
 - [x] React Bootstrap
 - [x] ChakraUI
 - [x] Tailwind UI
-- [ ] Flowbite React
+- [x] Flowbite React
 - [ ] Material UI
