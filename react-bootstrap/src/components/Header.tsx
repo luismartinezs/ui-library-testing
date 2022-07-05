@@ -1,19 +1,22 @@
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+
 const Header = () => {
   return (
-    <header>
-      <h1>Cute Puppies Express!</h1>
-      <nav>
-        <ol>
-          <li>
-            <a href="#">Bikes</a>
-          </li>
-          <li>
-            <a href="#">BMX</a>
-          </li>
-          <li>Jump Bike 3000</li>
-        </ol>
-      </nav>
-    </header>
+    <Navbar bg="primary" variant="dark" expand="lg">
+      <Container>
+        <Navbar.Brand>Cute Puppies Express!</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
+          <Nav className="mr-auto">
+            <Nav.Link href="#">Bikes</Nav.Link>
+            <Nav.Link href="#">Cars</Nav.Link>
+            <Nav.Link href="#">Boats</Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 };
 

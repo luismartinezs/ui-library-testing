@@ -1,72 +1,75 @@
 import React from "react";
 
-const Form = () => {
+import Button from "react-bootstrap/Button";
+import FloatingLabel from "react-bootstrap/FloatingLabel";
+import Form from "react-bootstrap/Form";
+
+const BaseForm = () => {
   return (
-    <form>
-      <label>
-        Name:
-        <input type="text" name="name" />
-      </label>
-      <label>
-        Essay:
-        <textarea />
-      </label>
-      <select aria-label="Fruit">
-        <option value="grapefruit">Grapefruit</option>
-        <option value="lime">Lime</option>
-        <option selected value="coconut">
-          Coconut
-        </option>
-        <option value="mango">Mango</option>
-      </select>
-      <label>
-        Select file:
-        <input type="file" />
-      </label>
-      <label>
-        Is going:
-        <input name="isGoing" type="checkbox" />
-      </label>
-      <label>
-        Start date:
-        <input
-          type="date"
-          id="start"
-          name="trip-start"
-          value="2018-07-22"
-          min="2018-01-01"
-          max="2018-12-31"
+    <Form>
+      <Form.Group className="mb-3" controlId="formBasicName">
+        <Form.Label>Name</Form.Label>
+        <Form.Control type="text" placeholder="Enter name" />
+      </Form.Group>
+      <Form.Group className="mb-3">
+        <FloatingLabel controlId="floatingTextarea2" label="Essay">
+          <Form.Control
+            as="textarea"
+            placeholder="Leave a comment here"
+            style={{ height: "5rem" }}
+          />
+        </FloatingLabel>
+      </Form.Group>
+      <Form.Group className="mb-3">
+        <Form.Select aria-label="Default select example">
+          <option>Fruit</option>
+          <option value="grapefruit">Grapefruit</option>
+          <option value="lime">Lime</option>
+          <option value="coconut">Coconut</option>
+          <option value="mango">Mango</option>
+        </Form.Select>
+      </Form.Group>
+      <Form.Group controlId="formFile" className="mb-3">
+        <Form.Label>Select file</Form.Label>
+        <Form.Control type="file" />
+      </Form.Group>
+      <Form.Group className="mb-3">
+        <Form.Check type="checkbox" id="checkbox1" label="Is going" />
+      </Form.Group>
+      <Form.Group className="mb-3" controlId="formDate">
+        <Form.Label>Start date</Form.Label>
+        <Form.Control type="date" placeholder="Start date" />
+      </Form.Group>
+      <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Label>Enter your email</Form.Label>
+        <Form.Control type="email" placeholder="name@example.com" />
+      </Form.Group>
+      <Form.Group className="mb-3" controlId="formBasicNumber">
+        <Form.Label>Number of tentacles (10-100)</Form.Label>
+        <Form.Control type="number" min="10" max="100" />
+      </Form.Group>
+      <Form.Group className="mb-3">
+        <Form.Check inline type="radio" name="drone" id="radio1" label="Huey" />
+        <Form.Check
+          inline
+          type="radio"
+          name="drone"
+          id="radio2"
+          label="Dewey"
         />
-      </label>
-      <label>
-        Enter your email:
-        <input type="email" pattern=".+@.\.com" />
-      </label>
-      <label>
-        Number of tentacles (10-100):
-        <input type="number" name="tentacles" min="10" max="100" />
-      </label>
-      <fieldset>
-        <legend>Select a maintenance drone:</legend>
-
-        <div>
-          <input type="radio" id="huey" name="drone" value="huey" checked />
-          <label htmlFor="huey">Huey</label>
-        </div>
-
-        <div>
-          <input type="radio" id="dewey" name="drone" value="dewey" />
-          <label htmlFor="dewey">Dewey</label>
-        </div>
-
-        <div>
-          <input type="radio" id="louie" name="drone" value="louie" />
-          <label htmlFor="louie">Louie</label>
-        </div>
-      </fieldset>
-      <input type="submit" value="Submit" />
-    </form>
+        <Form.Check
+          inline
+          type="radio"
+          name="drone"
+          id="radio3"
+          label="Louie"
+        />
+      </Form.Group>
+      <Button type="submit" variant="primary">
+        Submit
+      </Button>
+    </Form>
   );
 };
 
-export default Form;
+export default BaseForm;

@@ -1,5 +1,7 @@
+import Alert from "react-bootstrap/Alert";
+
 const ErrorState = () => {
-  return <div>There was an error</div>;
+  return <Alert variant="danger">There was an error</Alert>;
 };
 
 export default ErrorState;

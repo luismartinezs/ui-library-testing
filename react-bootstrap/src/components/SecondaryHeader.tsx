@@ -1,18 +1,18 @@
+import Nav from "react-bootstrap/Nav";
+
 const SecondaryHeader = () => {
   return (
-    <nav>
-      <ul>
-        <li>
-          <a>Link 1</a>
-        </li>
-        <li>
-          <a>Link 2</a>
-        </li>
-        <li>
-          <a>Link 3</a>
-        </li>
-      </ul>
-    </nav>
+    <Nav className="justify-content-center">
+      <Nav.Item>
+        <Nav.Link href="/">Link 1</Nav.Link>
+      </Nav.Item>
+      <Nav.Item>
+        <Nav.Link href="/">Link 2</Nav.Link>
+      </Nav.Item>
+      <Nav.Item>
+        <Nav.Link href="/">Link 3</Nav.Link>
+      </Nav.Item>
+    </Nav>
   );
 };
 

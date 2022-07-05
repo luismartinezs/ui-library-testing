@@ -8,7 +8,7 @@ const Buttons = () => {
       <Button as={Col} variant="primary">
         Primary
       </Button>
-      <Button as={Col} variant="secondary">
+      <Button as={Col} variant="secondary" className="mx-2">
         Secondary
       </Button>
       <Button as={Col} variant="outline">

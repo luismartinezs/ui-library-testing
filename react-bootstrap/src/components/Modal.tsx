@@ -1,21 +1,34 @@
-const Modal = () => {
+import React, { useState } from "react";
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
+
+const BaseModal = () => {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   return (
-    <div id="backdrop">
-      <div
-        role="alertdialog"
-        aria-modal="true"
-        aria-labelledby="dialog_label"
-        aria-describedby="dialog_desc"
-      >
-        <h2 id="dialog_label">Confirmation</h2>
-        <div id="dialog_desc">
-          <p>Are you sure you want to delete this file?</p>
-        </div>
-        <button type="button">No. Close this popup.</button>
-        <button type="button">Yes. Delete the file.</button>
-      </div>
-    </div>
+    <>
+      <Button variant="primary" onClick={handleShow}>
+        Launch demo modal
+      </Button>
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Confirmation</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Are you sure you want to delete this file?</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            No. Close this popup.
+          </Button>
+          <Button variant="primary" onClick={handleClose}>
+            Yes. Delete the file.
+          </Button>
+        </Modal.Footer>
+      </Modal>
+    </>
   );
 };
 
-export default Modal;
+export default BaseModal;

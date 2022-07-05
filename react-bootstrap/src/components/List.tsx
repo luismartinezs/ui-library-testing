@@ -1,5 +1,7 @@
 import React from "react";
 
+import ListGroup from "react-bootstrap/ListGroup";
+
 const items = [
   {
     id: 1,
@@ -23,14 +25,14 @@ const items = [
 
 const List = () => {
   return (
-    <ul>
+    <ListGroup>
       {items.map((item) => (
-        <li key={item.id}>
+        <ListGroup.Item key={item.id}>
           <h3>{item.name}</h3>
           <p>{item.description}</p>
-        </li>
+        </ListGroup.Item>
       ))}
-    </ul>
+    </ListGroup>
   );
 };
 

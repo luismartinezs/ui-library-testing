@@ -1,5 +1,7 @@
 import React from "react";
 
+import Container from "react-bootstrap/Container";
+
 import Form from "@/components/Form";
 import List from "@/components/List";
 import Card from "@/components/Card";
@@ -17,14 +19,16 @@ function App(): JSX.Element {
     <div>
       <Header />
       <SecondaryHeader />
-      <Form />
-      <List />
-      <Card />
-      <LoadingState />
-      <ErrorState />
-      <Buttons />
-      <Modal />
-      <TextContent />
+      <Container>
+        <Form />
+        <List />
+        <Card />
+        <LoadingState />
+        <ErrorState />
+        <Buttons />
+        <Modal />
+        <TextContent />
+      </Container>
       <Footer />
     </div>
   );
