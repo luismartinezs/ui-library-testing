@@ -23,14 +23,19 @@ const items = [
 
 const List = () => {
   return (
-    <ul>
-      {items.map((item) => (
-        <li key={item.id}>
-          <h3>{item.name}</h3>
-          <p>{item.description}</p>
-        </li>
-      ))}
-    </ul>
+    <div className="overflow-x-auto">
+      <table className="table table-zebra w-full">
+        <tbody>
+          {items.map((item) => (
+            <tr key={item.id}>
+              <th>{item.id}</th>
+              <td>{item.name}</td>
+              <td>{item.description}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 };
 

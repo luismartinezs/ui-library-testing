@@ -1,17 +1,9 @@
 const SecondaryHeader = () => {
   return (
-    <nav>
-      <ul>
-        <li>
-          <a>Link 1</a>
-        </li>
-        <li>
-          <a>Link 2</a>
-        </li>
-        <li>
-          <a>Link 3</a>
-        </li>
-      </ul>
+    <nav className="btm-nav z-10">
+      <button className="text-primary">Link 1</button>
+      <button className="text-primary active">Link 2</button>
+      <button className="text-primary">Link 3</button>
     </nav>
   );
 };

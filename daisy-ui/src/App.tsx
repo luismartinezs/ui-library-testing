@@ -17,14 +17,16 @@ function App(): JSX.Element {
     <div>
       <Header />
       <SecondaryHeader />
-      <Form />
-      <List />
-      <Card />
-      <LoadingState />
-      <ErrorState />
-      <Buttons />
-      <Modal />
-      <TextContent />
+      <div className="container mx-auto px-4 lg:px-0 mt-2">
+        <Form />
+        <List />
+        <Card />
+        <LoadingState />
+        <ErrorState />
+        <Buttons />
+        <Modal />
+        <TextContent />
+      </div>
       <Footer />
     </div>
   );
