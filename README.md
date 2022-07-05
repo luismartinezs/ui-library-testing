@@ -25,7 +25,7 @@
 
 - [x] DaisyUI
 - [x] React Bootstrap
-- [ ] ChakraUI
-- [ ] Tailwind UI
+- [x] ChakraUI
+- [x] Tailwind UI
 - [ ] Flowbite React
 - [ ] Material UI
