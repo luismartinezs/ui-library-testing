@@ -2,9 +2,8 @@
 
 ## Components to test
 
-- Form (formik + yum)
+- Form (formik / react-hook-form + yum)
   - Select + options
-  - Select + search + options fetched from API
   - Text input
   - Numeric input
   - Date input
