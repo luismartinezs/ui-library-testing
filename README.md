@@ -30,3 +30,28 @@
 - [x] Flowbite React
 - [x] Material UI
 
+## Further notes
+
+- Styled components allows for very clean code. See: https://styled-components.com/docs/basics#coming-from-css
+- Mantine: quick and nice styles out of the box, easy to work with
+
+What I would like:
+
+```js
+import { Button, Box } from "my-favorite-ui-library";
+
+const Buttons = () => {
+  return (
+    <Box flex justify-center items-center space-x-4 mt-4
+    >
+      <Button primary>Primary</Button>
+      <Button secondary>Secondary</Button>
+      <Button primary outline>
+        Outline
+      </Button>
+    </Box>
+  );
+};
+
+export default Buttons;
+```
