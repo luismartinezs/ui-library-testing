@@ -1,3 +1,1 @@
-# README
-
-Starter components
+Seems flexible and not too hard
